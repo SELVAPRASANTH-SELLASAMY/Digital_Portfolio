@@ -12,8 +12,9 @@ function About(){
     }
     useEffect(()=>{
         const date = new Date();
-        const year = (date.getFullYear() - 2003) - 1;
-        const month = Math.abs((date.getMonth() + 1) - 7);
+        const year = date.getFullYear() - 2003;
+        const currentMonth = date.getMonth() + 1;
+        const month = currentMonth < 7 ? 5 + currentMonth : currentMonth - 7;
         setAge(year+" years "+month+` month${month > 1 ? 's' : ""}`);
     },[]);
     return(

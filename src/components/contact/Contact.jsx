@@ -4,7 +4,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { AppContext } from '../../App';
 import { useContext, useRef, useState } from 'react';
 import Loader from '../loader/Loader';
-import Axios from 'axios';
+import Axios from '../utils/Axios';
 import useFormval from '../cutomhooks/useFormval';
 function Contact(){
     const {contactRef} = useContext(AppContext);
@@ -44,9 +44,15 @@ function Contact(){
 
     const sendMail = () => {
         setLoading(true);
-        Axios.post("https://jarvis-r2p3.onrender.com/portfolio/sendEmail",formState)
+        Axios.post("/sendEmail",formState)
         .then((res)=>{
             respond(res);
+            setFormState({
+                name:"",
+                email:"",
+                subject:"",
+                message:""
+            });
         })
         .catch((error)=>{
             respond(error);
