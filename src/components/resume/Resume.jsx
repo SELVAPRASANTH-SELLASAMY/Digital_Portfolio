@@ -26,7 +26,13 @@ function Resume(){
     ];
     const experienceContent = [
         {
-            year:"2024",
+            year:"Present",
+            field:"Associate Application Developer",
+            org:"Accenture",
+            info:"Coimbatore, Tamil Nadu, India."
+        },
+        {
+            year:"2024 (2M's)",
             field:"Software Engineer Intern",
             org:"Applied Materials India Pvt Ltd.",
             info:"Chennai, Tamil Nadu, India."
