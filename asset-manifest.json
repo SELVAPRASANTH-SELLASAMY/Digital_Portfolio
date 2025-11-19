@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Digital_Portfolio/static/css/main.49a8e48a.css",
-    "main.js": "/Digital_Portfolio/static/js/main.02872df1.js",
-    "static/media/cgs-max.png": "/Digital_Portfolio/static/media/cgs-max.23ccdd1cbc360a1f59a1.png",
-    "static/media/zukoCoffee-max.png": "/Digital_Portfolio/static/media/zukoCoffee-max.1c5d4cf3468626026f83.png",
-    "static/media/sql.png": "/Digital_Portfolio/static/media/sql.67476396698b18fac0be.png",
-    "static/media/java.png": "/Digital_Portfolio/static/media/java.a068dc83410ddc9c3e84.png",
-    "static/media/jsinter.png": "/Digital_Portfolio/static/media/jsinter.31059d14dd070f1f7a4c.png",
-    "static/media/portfolio-max.png": "/Digital_Portfolio/static/media/portfolio-max.3ebfb64f17b30859398d.png",
-    "static/media/jsbasic.png": "/Digital_Portfolio/static/media/jsbasic.dc7dad801382792cc816.png",
-    "static/media/cgs.png": "/Digital_Portfolio/static/media/cgs.992fa1e05ece76dac419.png",
-    "static/media/alcaline-max.png": "/Digital_Portfolio/static/media/alcaline-max.1016b106456fd9259224.png",
-    "static/media/Resume.Selvaprasanth.pdf": "/Digital_Portfolio/static/media/Resume.Selvaprasanth.e1db569a4c812db303ca.pdf",
-    "static/media/avatar.jpg": "/Digital_Portfolio/static/media/avatar.cd7d9269aa3e088717be.jpg",
-    "static/media/portfolio.png": "/Digital_Portfolio/static/media/portfolio.965d84935b73c972e620.png",
-    "static/media/zukoCoffee.png": "/Digital_Portfolio/static/media/zukoCoffee.7a22f5ab019235c6dd74.png",
-    "static/media/alcaline.png": "/Digital_Portfolio/static/media/alcaline.f620f6aeb16a2baf8c4f.png",
-    "static/media/about-image.jpg": "/Digital_Portfolio/static/media/about-image.fd8123623c720c12dfea.jpg",
-    "index.html": "/Digital_Portfolio/index.html",
-    "main.49a8e48a.css.map": "/Digital_Portfolio/static/css/main.49a8e48a.css.map",
-    "main.02872df1.js.map": "/Digital_Portfolio/static/js/main.02872df1.js.map"
+    "main.css": "/static/css/main.49a8e48a.css",
+    "main.js": "/static/js/main.f4511bfd.js",
+    "static/media/cgs-max.png": "/static/media/cgs-max.23ccdd1cbc360a1f59a1.png",
+    "static/media/zukoCoffee-max.png": "/static/media/zukoCoffee-max.1c5d4cf3468626026f83.png",
+    "static/media/sql.png": "/static/media/sql.67476396698b18fac0be.png",
+    "static/media/java.png": "/static/media/java.a068dc83410ddc9c3e84.png",
+    "static/media/jsinter.png": "/static/media/jsinter.31059d14dd070f1f7a4c.png",
+    "static/media/portfolio-max.png": "/static/media/portfolio-max.3ebfb64f17b30859398d.png",
+    "static/media/jsbasic.png": "/static/media/jsbasic.dc7dad801382792cc816.png",
+    "static/media/cgs.png": "/static/media/cgs.992fa1e05ece76dac419.png",
+    "static/media/alcaline-max.png": "/static/media/alcaline-max.1016b106456fd9259224.png",
+    "static/media/Resume.Selvaprasanth.pdf": "/static/media/Resume.Selvaprasanth.e1db569a4c812db303ca.pdf",
+    "static/media/avatar.jpg": "/static/media/avatar.cd7d9269aa3e088717be.jpg",
+    "static/media/portfolio.png": "/static/media/portfolio.965d84935b73c972e620.png",
+    "static/media/zukoCoffee.png": "/static/media/zukoCoffee.7a22f5ab019235c6dd74.png",
+    "static/media/alcaline.png": "/static/media/alcaline.f620f6aeb16a2baf8c4f.png",
+    "static/media/about-image.jpg": "/static/media/about-image.fd8123623c720c12dfea.jpg",
+    "index.html": "/index.html",
+    "main.49a8e48a.css.map": "/static/css/main.49a8e48a.css.map",
+    "main.f4511bfd.js.map": "/static/js/main.f4511bfd.js.map"
   },
   "entrypoints": [
     "static/css/main.49a8e48a.css",
-    "static/js/main.02872df1.js"
+    "static/js/main.f4511bfd.js"
   ]
 }
