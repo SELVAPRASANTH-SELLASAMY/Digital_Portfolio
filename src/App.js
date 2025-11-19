@@ -28,7 +28,7 @@ function App() {
                 <Route path='/' element = {
                   <>
                     <Helmet>
-                      <title>Prasanth.Software</title>
+                      <title>prasanth.live</title>
                     </Helmet>
                     <Home/>
                     <About/>
@@ -45,7 +45,7 @@ function App() {
                 <Route path='/work' element={
                   <>
                     <Helmet>
-                      <title>Prasanth.Software | works</title>
+                      <title>prasanth.live | works</title>
                     </Helmet>
                     <Workdesc/>
                   </>
