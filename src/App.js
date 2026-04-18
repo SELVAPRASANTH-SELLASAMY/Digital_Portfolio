@@ -12,6 +12,7 @@ function App() {
   const blogRef = useRef();
   const contactRef = useRef();
   const navReferences = {aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef};
+  const domain = process.env.REACT_APP_API_URL;
   return (
     <HelmetProvider>
       <div className="App">
@@ -21,14 +22,14 @@ function App() {
           <meta name='author' content='Selvaprasanth'/>
         </Helmet>
         <AppContext.Provider value={navReferences}>
-          <Router>
+          <Router future={{v7_startTransition:true, v7_relativeSplatPath:true}}>
             <Navbar/>
             <main>
               <Routes>
                 <Route path='/' element = {
                   <>
                     <Helmet>
-                      <title>prasanth.live</title>
+                      <title>{domain?.replace('https://api.','')}</title>
                     </Helmet>
                     <Home/>
                     <About/>
@@ -45,7 +46,7 @@ function App() {
                 <Route path='/work' element={
                   <>
                     <Helmet>
-                      <title>prasanth.live | works</title>
+                      <title>{domain?.replace('https://api.','')} | works</title>
                     </Helmet>
                     <Workdesc/>
                   </>

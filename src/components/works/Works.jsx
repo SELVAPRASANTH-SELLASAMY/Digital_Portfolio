@@ -2,10 +2,12 @@ import workStyle from './works.module.css';
 import { RiInformation2Line, RiCodeSSlashLine } from "react-icons/ri";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../App';
 import Lazyimage from '../lazyimage/Lazyimage';
 import {cgs,M_cgs,alcaline,M_alcaline,zuko,M_zuko,portfolio,M_portfolio} from './workresources';
 function Works(){
+    const navigate = useNavigate();
     const {worksRef} = useContext(AppContext);
     const workContent = [
         {
@@ -58,10 +60,10 @@ function Works(){
     },[activeTab]);
 
     const redirect = (url) => {
-        window.open(url,"_blank");
+        window.open(url,"_blank","noopener noreferrer");
     }
     const goTo = (name) => {
-        window.location.href = `/#work?name=${name}`;
+        navigate(`/work?name=${name}`);
     }
     
     return(
