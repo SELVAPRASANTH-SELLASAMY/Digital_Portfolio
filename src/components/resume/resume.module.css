@@ -4,7 +4,7 @@
 .resumeWrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
-    gap: 2.5rem;
+    gap: 2rem;
 
     --pointLineWidth: .3rem;
     --minimumYearWidth: 117px;
@@ -42,7 +42,7 @@
 .resumeWrapper .timeline{
     padding: 1rem 0;
 }
-.resumeWrapper .year{
+.resumeWrapper .year, .resumeWrapper .exp_year{
     color: var(--lightBlue);
     font-size: var(--small);
     background-color: var(--lightGreen);
@@ -54,7 +54,7 @@
     position: relative;
     margin-top: .2rem;
 }
-.resumeWrapper .year::after{
+.resumeWrapper .year::after, .resumeWrapper .exp_year::after{
     content: "";
     background-color: var(--commonBg);
     height: var(--pointCircleSize);
@@ -112,7 +112,7 @@
     .resumeWrapper .timeline::before{
         left: -2.5rem;
     }
-    .resumeWrapper .year::after{
+    .resumeWrapper .year::after, .resumeWrapper .exp_year::after{
         --v1: calc(var(--pointCircleSize) / 2 * -1 - var(--pointLineWidth) / 2);
         left: calc(var(--v1) - 2.5rem);
     }
@@ -120,5 +120,19 @@
         width: 2rem;
         top: -2rem;
         left: -2.5rem;
+    }
+}
+
+@media screen and (width > 694px) {
+    .resumeWrapper .exp_year{
+        white-space: wrap;
+        max-width: 117.41px;
+        line-height: 1.25rem;
+    }
+    .resumeWrapper .experience .activity{
+        margin-top: .6rem;
+    }
+    .resumeWrapper .exp_year::after{
+        top: .6rem;
     }
 }

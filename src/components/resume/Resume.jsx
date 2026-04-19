@@ -26,13 +26,13 @@ function Resume(){
     ];
     const experienceContent = [
         {
-            year:"Present",
+            year:"Mar 2025 - Present",
             field:"Associate Application Developer",
-            org:"Accenture",
+            org:"Accenture in India",
             info:"Coimbatore, Tamil Nadu, India."
         },
         {
-            year:"2024 (2M's)",
+            year:"Apr 2024 - May 2024",
             field:"Software Engineer Intern",
             org:"Applied Materials India Pvt Ltd.",
             info:"Chennai, Tamil Nadu, India."
@@ -60,13 +60,13 @@ function Resume(){
                 <div className={resumeStyle.experience}>
                     <h4><span>{<RiShoppingBagLine/>}</span>Working Experience</h4>
                     {
-                        experienceContent.map((education,index)=>(
+                        experienceContent.map((exp,index)=>(
                             <div key={index} className={resumeStyle.timeline}>
-                                <span className={resumeStyle.year}>{education.year}</span>
+                                <span className={resumeStyle.exp_year}>{exp.year}</span>
                                 <span className={resumeStyle.activity}>
-                                    <h5 className={resumeStyle.field}>{education.field}</h5>
-                                    <p className={resumeStyle.orgName}>{education.org}</p>
-                                    <p className={resumeStyle.activityInfo}>{education.info}</p>
+                                    <h5 className={resumeStyle.field}>{exp.field}</h5>
+                                    <p className={resumeStyle.orgName}>{exp.org}</p>
+                                    <p className={resumeStyle.activityInfo}>{exp.info}</p>
                                 </span>
                             </div>
                         ))
