@@ -1,7 +1,7 @@
 import Socialprofiles from '../socialprofile/Socialprofiles';
 import footerStyle from './footer.module.css';
 function Footer(){
-    const domain = process.env.REACT_APP_API_URL;
+    const domain = import.meta.env.VITE_API_URL;
     return(
         <footer>
             <Socialprofiles/>

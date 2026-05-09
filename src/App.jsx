@@ -12,7 +12,7 @@ function App() {
   const blogRef = useRef();
   const contactRef = useRef();
   const navReferences = {aboutRef,homeRef,resumeRef,worksRef,blogRef,contactRef};
-  const domain = process.env.REACT_APP_API_URL;
+  const domain = import.meta.env.VITE_API_URL;
   return (
     <HelmetProvider>
       <div className="App">

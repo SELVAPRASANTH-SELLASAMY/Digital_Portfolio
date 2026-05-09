@@ -1,5 +1,5 @@
 import Axios from "axios";
 const AxiosInstance = Axios.create({
-    baseURL: `${process.env.REACT_APP_API_URL}/portfolio`
+    baseURL: `${import.meta.env.VITE_API_URL}/portfolio`
 });
 export default AxiosInstance;
