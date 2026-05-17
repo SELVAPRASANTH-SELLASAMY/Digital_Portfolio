@@ -1,5 +1,5 @@
 import aboutStyle from './about.module.css';
-import AboutImage from '../../assets/about-image.jpg';
+import AboutImage from '../../assets/about-image.png';
 import { useEffect, useState, useContext } from 'react';
 import { AppContext } from '../../App';
 import { saveAs } from 'file-saver';

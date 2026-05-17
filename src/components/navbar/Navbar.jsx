@@ -4,7 +4,7 @@ import { RiMenuFill } from "react-icons/ri";
 import { AppContext } from '../../App';
 import { useLocation } from 'react-router-dom';
 function Navbar(){
-    const [changeBg,setChangeBg] = useState(false);
+    const [changeBg,setChangeBg] = useState(window.scrollY > 50 ? true : false);
     const [activeWindow,setActiveWindow] = useState('Home');
     const location = useLocation();
 

@@ -1,5 +1,5 @@
 import homeStyle from './home.module.css';
-import avatar from '../../assets/avatar.jpg';
+import avatar from '../../assets/avatar.png';
 import { RiArrowDownLine} from "react-icons/ri";
 import { useEffect, useRef, useState, useContext } from 'react';
 import Socialprofiles from '../socialprofile/Socialprofiles';
