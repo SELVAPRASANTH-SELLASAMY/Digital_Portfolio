@@ -214,7 +214,7 @@ div.jobInfo:not(:last-child){
     } */
 }
 
-@media screen and (width <= 400px) {
+@media screen and (width <= 375px) {
     div.duration,.location{
         font-size: .8rem;
     }
