@@ -1,22 +1,19 @@
 import aboutStyle from './about.module.css';
 import AboutImage from '../../assets/about-image.png';
-import { useEffect, useState, useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../App';
 import { saveAs } from 'file-saver';
 import resumeFile from './Resume.Selvaprasanth.pdf';
+import useTimeCalculator from "../cutomhooks/useTimeCalculator";
 function About(){
-    const [age,setAge] = useState("");
+    const getTime = useTimeCalculator();
+
     const {aboutRef} = useContext(AppContext);
+    
     const handleDownload = () => {
         saveAs(resumeFile,'resume.selvaprasanth.pdf');
     }
-    useEffect(()=>{
-        const date = new Date();
-        const currentMonth = date.getMonth() + 1;
-        const month = currentMonth < 7 ? 5 + currentMonth : currentMonth - 7;
-        const year = date.getFullYear() - (2003 + (currentMonth < 7 ? 1 : 0));
-        setAge(year+" years "+month+` month${month > 1 ? 's' : ""}`);
-    },[]);
+    
     return(
         <section name='about' ref={aboutRef} className={aboutStyle.about}>
             <h2>About Me <span className='bottomLine'><span className='movingBall'></span></span></h2>
@@ -33,7 +30,7 @@ function About(){
                     <ul>
                         <li><strong>first name</strong><span>Selvaprasanth</span></li>
                         <li><strong>last name</strong><span>Sellasamy</span></li>
-                        <li><strong>age</strong><span>{age}</span></li>
+                        <li><strong>age</strong><span style={{textTransform:'lowercase'}}>{getTime('07','2003')}</span></li>
                         <li><strong>nationality</strong><span>Indian</span></li>
                         <li><strong>languages</strong><span>English & tamil</span></li>
                         <li><strong>address</strong><span>Dindigul, Tamil nadu, India</span></li>
