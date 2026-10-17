@@ -90,7 +90,7 @@ function Resume(){
             designations: [
                 {
                     name: "Software Engineer Intern",
-                    duration: "Mar 2024 - May 2024",
+                    duration: "Apr 2024 - May 2024",
                     location: "Chennai, Tamil Nadu, India",
                     locationType: "Onsite"
                 }
