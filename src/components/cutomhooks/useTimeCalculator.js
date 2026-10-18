@@ -1,9 +1,9 @@
 const useTimeCalculator = () => {
-    const getTime = (startMonth,startYear,endMonth = null,endYear = null) => {
+    const getTime = (startMonth,startYear,endMonth = null,endYear = null,startDay) => {
         const date = new Date();
         const currentMonth = endMonth ? Number(endMonth) : Number(date.getMonth()) + 1;
         const currentYear = endYear ? Number(endYear) : Number(date.getFullYear());
-        const month = (currentMonth < Number(startMonth) ? (12 - startMonth) + currentMonth : currentMonth - Number(startMonth)) + 1;
+        let month = (currentMonth < Number(startMonth) ? (12 - startMonth) + currentMonth : currentMonth - Number(startMonth)); month = startDay ? date.getDate() < startDay ? month - 1 : month + 0 : month + 1;
         const year = currentYear - (Number(startYear) + (currentMonth < Number(startMonth) ? 1 : 0));
         return year+` yr${year > 1 ? 's ' : ' '}`+month+` mo${month > 1 ? 's' : ""}`;
     }

@@ -30,7 +30,7 @@ function About(){
                     <ul>
                         <li><strong>first name</strong><span>Selvaprasanth</span></li>
                         <li><strong>last name</strong><span>Sellasamy</span></li>
-                        <li><strong>age</strong><span style={{textTransform:'lowercase'}}>{getTime('07','2003')}</span></li>
+                        <li><strong>age</strong><span style={{textTransform:'lowercase'}}>{getTime('07','2003',null,null,'21')}</span></li>
                         <li><strong>nationality</strong><span>Indian</span></li>
                         <li><strong>languages</strong><span>English & tamil</span></li>
                         <li><strong>address</strong><span>Dindigul, Tamil nadu, India</span></li>
