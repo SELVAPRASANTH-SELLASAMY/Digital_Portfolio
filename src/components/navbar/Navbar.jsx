@@ -3,6 +3,7 @@ import navStyle from './navbar.module.css';
 import { RiMenuFill } from "react-icons/ri";
 import { AppContext } from '../../App';
 import { useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from "motion/react";
 function Navbar(){
     const [changeBg,setChangeBg] = useState(window.scrollY > 50 ? true : false);
     const [activeWindow,setActiveWindow] = useState('Home');
@@ -59,20 +60,27 @@ function Navbar(){
     return(
         <header style={changeBg ? scrollEffect : null} className={navStyle.navbar}>
             <h1>Prasanth</h1>
-            {
-                navbar ? 
-                <nav onClick={handleMenubar}>
-                    <ol>
-                        <li className={activeWindow === 'home' ? navStyle.active : null} onClick={()=>handleNavigation(homeRef)}><span>Home</span></li>
-                        <li className={activeWindow === 'about' ? navStyle.active : null} onClick={()=>handleNavigation(aboutRef)}><span>About</span></li>
-                        <li className={activeWindow === 'resume' ? navStyle.active : null} onClick={()=>handleNavigation(resumeRef)}><span>Resume</span></li>
-                        <li className={activeWindow === 'works' ? navStyle.active : null} onClick={()=>handleNavigation(worksRef)}><span>Works</span></li>
-                        <li className={activeWindow === 'blogs' ? navStyle.active : null} onClick={()=>handleNavigation(blogRef)}><span>Blog</span></li>
-                        <li className={activeWindow === 'contact' ? navStyle.active : null} onClick={()=>handleNavigation(contactRef)}><span>Contact</span></li>
-                        <button onClick={()=>handleNavigation(contactRef)}>Hire me</button>
-                    </ol>
-                </nav> : null
-            }
+            <AnimatePresence>
+                {
+                    navbar ? 
+                    <nav onClick={handleMenubar}>
+                        <motion.ol
+                            initial={{x: "300px"}}
+                            animate={{x: 0}}
+                            exit={{x: "300px"}}
+                            transition={{duration: .25,ease: "easeOut"}}
+                        >
+                            <li className={activeWindow === 'home' ? navStyle.active : null} onClick={()=>handleNavigation(homeRef)}><span>Home</span></li>
+                            <li className={activeWindow === 'about' ? navStyle.active : null} onClick={()=>handleNavigation(aboutRef)}><span>About</span></li>
+                            <li className={activeWindow === 'resume' ? navStyle.active : null} onClick={()=>handleNavigation(resumeRef)}><span>Resume</span></li>
+                            <li className={activeWindow === 'works' ? navStyle.active : null} onClick={()=>handleNavigation(worksRef)}><span>Works</span></li>
+                            <li className={activeWindow === 'blogs' ? navStyle.active : null} onClick={()=>handleNavigation(blogRef)}><span>Blog</span></li>
+                            <li className={activeWindow === 'contact' ? navStyle.active : null} onClick={()=>handleNavigation(contactRef)}><span>Contact</span></li>
+                            <button onClick={()=>handleNavigation(contactRef)}>Hire me</button>
+                        </motion.ol>
+                    </nav> : null
+                }
+            </AnimatePresence>
             <button onClick={()=>handleNavigation(contactRef)}>Hire me</button>
             <RiMenuFill className={navStyle.hamburger} onClick={handleMenubar}/>
         </header>

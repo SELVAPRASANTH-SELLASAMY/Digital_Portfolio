@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../App';
 import Lazyimage from '../lazyimage/Lazyimage';
 import {cgs,M_cgs,alcaline,M_alcaline,zuko,M_zuko,portfolio,M_portfolio} from './workresources';
+import { motion } from "motion/react";
 function Works(){
     const navigate = useNavigate();
     const {worksRef} = useContext(AppContext);
     const workContent = [
         {
+            id: 1,
             image:cgs,
             thumb:M_cgs,
             heading:"Core Green Softwares landing page",
@@ -20,15 +22,7 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Core-Green-Softwares.git'
         },
         {
-            image:alcaline,
-            thumb:M_alcaline,
-            heading:"Alcaline technologies landing page",
-            definition:"A responsive landing page",
-            stack:"HTML,CSS,javascript",
-            liveUrl:'https://selvaprasanth-sellasamy.github.io/Alkaline_technologies/',
-            repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Alkaline_technologies.git'
-        },
-        {
+            id: 2,
             image:zuko,
             thumb:M_zuko,
             heading:"Zuko coffee",
@@ -38,6 +32,7 @@ function Works(){
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/zuko_coffee.git'
         },
         {
+            id: 3,
             image:portfolio,
             thumb:M_portfolio,
             heading:"Portfolio",
@@ -45,6 +40,16 @@ function Works(){
             stack:"ReactJs,CSS,swiperJs",
             liveUrl:'https://selvaprasanth-sellasamy.github.io/portfolio/',
             repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/portfolio.git'
+        },
+        {
+            id: 4,
+            image:alcaline,
+            thumb:M_alcaline,
+            heading:"Alcaline technologies landing page",
+            definition:"A responsive landing page",
+            stack:"HTML,CSS,javascript",
+            liveUrl:'https://selvaprasanth-sellasamy.github.io/Alkaline_technologies/',
+            repoUrl:'https://github.com/SELVAPRASANTH-SELLASAMY/Alkaline_technologies.git'
         }
     ];
 
@@ -65,6 +70,29 @@ function Works(){
     const goTo = (name) => {
         navigate(`/work?name=${name}`);
     }
+
+    const tabAnimations = {
+        All: {
+            initial: { scale: 0 },
+            animate: { scale: 1 },
+        },
+        "HTML & CSS": {
+            initial: { x: "100%" },
+            animate: { x: 0 },
+        },
+        "React Js": {
+            initial: { scale: 0 },
+            animate: { scale: 1 },
+        },
+        "PHP & MySQL": {
+            initial: { x: "-100%" },
+            animate: { x: 0 },
+        },
+        "JavaScript": {
+            initial: { y: "100%" },
+            animate: { y: 0 },
+        }
+    };
     
     return(
         <section name='works' ref={worksRef} className={workStyle.works}>
@@ -76,10 +104,17 @@ function Works(){
                     ))
                 }
             </ul>
-            <div className={workStyle.workList}>
+            <div className={workStyle.workList} style={{overflow: "hidden"}}>
                 {
-                    filteredContents.map((content,index)=>(
-                        <div key={index} className={workStyle.workDefinition}>
+                    filteredContents.map((content)=>(
+                        <motion.div
+                            variants={tabAnimations[activeTab]}
+                            initial="initial"
+                            animate="animate"
+                            exit="initial"
+                            transition={{duration: .1, ease: "linear"}}
+                            key={content.id} className={workStyle.workDefinition}
+                        >
                             <div className={workStyle.figure}>
                                 <Lazyimage componentClass={workStyle.img} placeholder={content.thumb} source={content.image}/>
                                 <div className={workStyle.hoverContent}>
@@ -90,7 +125,7 @@ function Works(){
                             </div>
                             <h5>{content.heading}</h5>
                             <p>{content.definition}</p>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </div>

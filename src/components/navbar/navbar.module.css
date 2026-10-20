@@ -120,16 +120,16 @@ nav ol button{
         margin-bottom: 0;
         padding-top: 80px;
         border-radius: 0 0 0 100px;
-        animation: navBarToggleAnimation 250ms linear 1;
+        /* animation: navBarToggleAnimation 250ms linear 1; */
     }
-    @keyframes navBarToggleAnimation {
+    /* @keyframes navBarToggleAnimation {
         From{
             transform: translateX(300px);
         }
         To{
             transform: translateX(0);
         }
-    }
+    } */
     nav ol li{
         width: 95%;
         text-align: center;

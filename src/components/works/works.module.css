@@ -31,16 +31,16 @@
     background-color: var(--tileBlue);
     box-shadow: var(--smokeShadow);
     transition: 500ms;
-    animation: scaleup 500ms linear 1;
+    /* animation: scaleup 500ms linear 1; */
 }
-@keyframes scaleup{
+/* @keyframes scaleup{
     0%{
         transform: scale(.5);
     }
     100%{
         transform: scale(1.02);
     }
-}
+} */
 .workList .workDefinition:hover{
     transform: translateY(-.5rem);
 }
